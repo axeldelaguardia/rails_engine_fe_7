@@ -11,6 +11,13 @@ class RailsEngineFacade
 		Merchant.new(merchant)
 	end
 
+	def get_merchant_items(id)
+		items = service.merchant_items(id)[:data]
+		items.map do |item|
+			Item.new(item)
+		end
+	end
+
 	def service
 		RailsEngineService.new
 	end
