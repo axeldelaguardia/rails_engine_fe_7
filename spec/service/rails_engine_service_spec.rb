@@ -51,5 +51,34 @@ RSpec.describe "Rails Engine Service" do
 				expect(merchant[:data][:attributes][:name]).to be_a String
 			end
 		end
+
+		describe "merchant items" do
+			let(:items) {
+				RailsEngineService.new.merchant_items(1)
+			}
+
+			it "returns all items for a merchant" do
+				expect(items).to be_a Hash
+				expect(items).to have_key(:data)
+				expect(items[:data]).to be_an Array
+
+				items[:data].each do |item|
+					expect(item.keys).to match([:id, :type, :attributes])
+
+					expect(item[:id]).to be_a String
+
+					expect(item[:type]).to be_a String
+					expect(item[:type]).to eq("item")
+
+					expect(item[:attributes]).to be_a Hash
+					expect(item[:attributes].keys).to match([:name, :description, :unit_price, :merchant_id])
+
+					expect(item[:attributes][:name]).to be_a String
+					expect(item[:attributes][:description]).to be_a String
+					expect(item[:attributes][:unit_price]).to be_a Float
+					expect(item[:attributes][:merchant_id]).to be_an Integer
+				end
+			end
+		end
 	end
 end
