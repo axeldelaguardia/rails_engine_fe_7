@@ -2,7 +2,7 @@
 
 <h3>Items:</h3>
 <ul class="merchant-items">
-	<%= @facade.get_merchant_items(@merchant_id).each do |item| %>
+	<% @facade.get_merchant_items(@merchant_id).each do |item| %>
 		<li><%= link_to item.name, item_path(item.id) %></li>
 	<% end %>
 </ul>

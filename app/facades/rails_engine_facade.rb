@@ -30,6 +30,11 @@ class RailsEngineFacade
 		Item.new(item)
 	end
 
+	def find_merchant(search)
+		merchant = service.find_merchant(search)[:data]
+		Merchant.new(merchant)
+	end
+
 	def service
 		RailsEngineService.new
 	end
