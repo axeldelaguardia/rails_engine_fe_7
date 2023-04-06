@@ -39,12 +39,12 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 16dd121a-5f9c-4c37-a84a-6bbc3bf41e3c
+      - 96dca752-2dcc-40e6-b757-ddb8b03c63c0
       X-Runtime:
-      - '0.035829'
+      - '0.010159'
       Server-Timing:
-      - start_processing.action_controller;dur=0.17, sql.active_record;dur=7.01, instantiation.active_record;dur=0.92,
-        process_action.action_controller;dur=21.21
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.62, instantiation.active_record;dur=0.28,
+        process_action.action_controller;dur=3.92
       Transfer-Encoding:
       - chunked
     body:
@@ -113,5 +113,5 @@ http_interactions:
         Prohaska and Rolfson"}},{"id":"100","type":"merchant","attributes":{"name":"Wisozk,
         Hoeger and Bosco"}},{"id":"99","type":"merchant","attributes":{"name":"Fahey-Stiedemann"}},{"id":"42","type":"merchant","attributes":{"name":"Glover
         Inc"}}]}'
-  recorded_at: Wed, 05 Apr 2023 18:15:22 GMT
+  recorded_at: Thu, 06 Apr 2023 01:17:34 GMT
 recorded_with: VCR 6.1.0

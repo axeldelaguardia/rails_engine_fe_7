@@ -18,6 +18,18 @@ class RailsEngineFacade
 		end
 	end
 
+	def get_items
+		items = service.items[:data]
+		items.map do |item|
+			Item.new(item)
+		end
+	end
+
+	def get_item(id)
+		item = service.item(id)[:data]
+		Item.new(item)
+	end
+
 	def service
 		RailsEngineService.new
 	end

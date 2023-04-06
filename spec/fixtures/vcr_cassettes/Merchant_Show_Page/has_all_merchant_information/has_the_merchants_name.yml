@@ -2,6 +2,57 @@
 http_interactions:
 - request:
     method: get
+    uri: http://localhost:3000/api/v1/merchants/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"bc1fd1230d92d0b6bb211d1985ff7fd3"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3bc71f4e-c574-425b-ae00-65f7e35ade7d
+      X-Runtime:
+      - '0.007425'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.09, sql.active_record;dur=0.54, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=1.19
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"merchant","attributes":{"name":"Schroeder-Jerde"}}}'
+  recorded_at: Thu, 06 Apr 2023 01:17:34 GMT
+- request:
+    method: get
     uri: http://localhost:3000/api/v1/merchants/1/items
     body:
       encoding: US-ASCII
@@ -39,12 +90,12 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 69b10c15-54fe-4bfb-ab71-c81ffdbf8279
+      - b35b43a6-2437-4308-83cd-7bbd929aa55d
       X-Runtime:
-      - '0.013084'
+      - '0.008823'
       Server-Timing:
-      - start_processing.action_controller;dur=0.08, sql.active_record;dur=4.61, instantiation.active_record;dur=0.22,
-        process_action.action_controller;dur=7.21
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=1.04, instantiation.active_record;dur=0.14,
+        process_action.action_controller;dur=2.85
       Transfer-Encoding:
       - chunked
     body:
@@ -90,5 +141,5 @@ http_interactions:
         cupiditate reiciendis est commodi non. Atque eveniet sed. Illum excepturi
         praesentium reiciendis voluptatibus eveniet odit perspiciatis. Odio optio
         nisi rerum nihil ut.","unit_price":323.01,"merchant_id":1}}]}'
-  recorded_at: Thu, 06 Apr 2023 01:17:33 GMT
+  recorded_at: Thu, 06 Apr 2023 01:17:34 GMT
 recorded_with: VCR 6.1.0

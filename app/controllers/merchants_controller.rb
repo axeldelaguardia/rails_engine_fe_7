@@ -4,6 +4,7 @@ class MerchantsController < ApplicationController
 	end
 
 	def show
+		@merchant_id = params[:id]
 		@facade = RailsEngineFacade.new
 	end
 end
