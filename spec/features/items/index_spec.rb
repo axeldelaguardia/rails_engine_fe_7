@@ -14,4 +14,10 @@ RSpec.describe "Items Index Page", :vcr do
 			expect(page).to have_link("Item Repellendus Harum")
 		end
 	end
+
+	it "clicking link takes us to item show page" do
+		click_link "Item Nemo Facere"
+
+		expect(current_path).to eq(item_path(4))
+	end
 end
